@@ -1,0 +1,126 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  color: rgb(49, 48, 48);
+  font-weight: 600;
+}
+.container {
+  margin: 0 auto;
+  width: 960px;
+  /* background-color: aqua; */
+}
+.navi {
+  width: 960px;
+  height: 60px;
+  border-bottom: 3px solid rgb(17, 17, 105);
+  padding-bottom: 20px;
+}
+.navi ul {
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  /* background-color: aqua; */
+}
+.navi ul li {
+  text-align: center;
+  display: inline-block;
+  float: left;
+  width: 150px;
+  padding: 10px;
+  /* background-color: antiquewhite; */
+}
+.navi a:link,
+.navi a:visited {
+  font-size: 14px;
+  padding: 10px;
+  text-decoration: none;
+  /* 링크걸고 갔다왔을때 밑에 선을 안 남기겠다  */
+  /* a에 text-style none 해도됨 */
+}
+.navi a:hover,
+.navi a:focus {
+  background-color: black;
+  color: aliceblue;
+}
+.navi a:active {
+  background-color: #f00;
+  /* 클릭하면 박스 빨간색으로 변함 */
+}
+.contents {
+  margin: 30px auto;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #222;
+  border-radius: 5px;
+}
+.contents :nth-child(4) {
+  background-color: aquamarine;
+  /* 'contents 모든 요소중에 4번째거' 라는 뜻 */
+}
+.contents p:nth-of-type(3) {
+  background-color: #f00;
+  /* 'p 타입에서 3번째'거 라는 뜻  */
+}
+#container {
+  text-align: center;
+  color: #222;
+  /* background-color: aquamarine; */
+}
+table,
+td,
+tr {
+  border: 1px solid #ccc;
+}
+table {
+  width: 200px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  /* collapse 안하면 테이블 선 두줄로 나옴 */
+}
+td {
+  text-align: left;
+  padding: 10px;
+}
+table tr:nth-of-type(2n) {
+  /* '2n 짝수마다' 라는 뜻 */
+  background-color: #ccc;
+}
+
+table tr:nth-child(3) {
+  background-color: aqua;
+  /* child는 좀 더 디테일 하게 잡아줌 */
+}
+
+/* nth-of-type은 요소중에~하는 뜻 */
+/* nth-of-child는 몇번째 애! 라는 뜻 */
+
+.container2 {
+  width: 960px;
+  margin: 0 auto;
+}
+.container2 ul li {
+  margin: 15px;
+  list-style: none;
+}
+.container2 ul li.new::after {
+  content: "NEW!!";
+  font-size: x-small;
+  padding: 2px 4px;
+  margin: 10px;
+  background-color: #f00;
+  border-radius: 2px;
+  color: #fff;
+}
+.container2 ul li.hi::after {
+  content: "Hit!!";
+  font-size: 13px;
+  padding: 2px 4px;
+  margin: 10px;
+  background-color: rgb(68, 196, 63);
+  border-radius: 100px;
+  color: #fff;
+}
